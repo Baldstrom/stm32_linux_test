@@ -1,12 +1,17 @@
+// Software Verion / Part Number
+#include "version/version.h"
 
+#include "main.h"
+#include "system.h"
 
-int main()
+int main(void)
 {
-
-    for(;;)
-    {
-        asm volatile("NOP");
-    }
-
-    return 0;
+	System_SetClocks();
+	
+	int i = 0;
+	while(1) {
+		i++;
+	}
+	
+	return 0;
 }
