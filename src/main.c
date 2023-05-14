@@ -3,7 +3,6 @@
 int main()
 {
 
-
     for(;;)
     {
         asm volatile("NOP");
