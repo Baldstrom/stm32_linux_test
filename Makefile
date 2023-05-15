@@ -42,6 +42,5 @@ clean:
 	rm -rf $(ODIR)/*
 
 .PHONY: load
-
 load: debug
 	st-flash --format=ihex write $(HEXNAME)
