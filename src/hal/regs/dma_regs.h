@@ -181,7 +181,7 @@ typedef struct
     __REG32 feie : 1;
     __REG32 : 24;
 } __attribute__((packed)) dma_sxfcr_t;
-\
+
 typedef struct
 {
     dma_lisr_t DMA_LISR;
