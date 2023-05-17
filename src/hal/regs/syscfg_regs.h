@@ -6,58 +6,58 @@
 
 typedef struct
 {
-    __REG32 MEM_MODE : 2;
+    __REG32 mem_mode : 2;
     __REG32 : 30;
 } __attribute__((packed)) syscfg_memrmp_t;
 
 typedef struct
 {
     __REG32 : 23;
-    __REG32 MII_RMII_SEL : 1;
+    __REG32 mii_rmii_sel : 1;
     __REG32 : 8;
 } __attribute__((packed)) syscfg_pmc_t;
 
 typedef struct
 {
-    __REG32 EXTI0 : 4;
-    __REG32 EXTI1 : 4;
-    __REG32 EXTI2 : 4;
-    __REG32 EXTI3 : 4;
+    __REG32 exti0 : 4;
+    __REG32 exti1 : 4;
+    __REG32 exti2 : 4;
+    __REG32 exti3 : 4;
     __REG32 : 16;
 } __attribute__((packed)) syscfg_exticr1_t;
 
 typedef struct
 {
-    __REG32 EXTI0 : 4;
-    __REG32 EXTI1 : 4;
-    __REG32 EXTI2 : 4;
-    __REG32 EXTI3 : 4;
+    __REG32 exti0 : 4;
+    __REG32 exti1 : 4;
+    __REG32 exti2 : 4;
+    __REG32 exti3 : 4;
     __REG32 : 16;
 } __attribute__((packed)) syscfg_exticr2_t;
 
 typedef struct
 {
-    __REG32 EXTI0 : 4;
-    __REG32 EXTI1 : 4;
-    __REG32 EXTI2 : 4;
-    __REG32 EXTI3 : 4;
+    __REG32 exti0 : 4;
+    __REG32 exti1 : 4;
+    __REG32 exti2 : 4;
+    __REG32 exti3 : 4;
     __REG32 : 16;
 } __attribute__((packed)) syscfg_exticr3_t;
 
 typedef struct
 {
-    __REG32 EXTI0 : 4;
-    __REG32 EXTI1 : 4;
-    __REG32 EXTI2 : 4;
-    __REG32 EXTI3 : 4;
+    __REG32 exti0 : 4;
+    __REG32 exti1 : 4;
+    __REG32 exti2 : 4;
+    __REG32 exti3 : 4;
     __REG32 : 16;
 } __attribute__((packed)) syscfg_exticr4_t;
 
 typedef struct
 {
-    __REG32 CMP_PD : 1;
+    __REG32 cmp_pd : 1;
     __REG32 : 6;
-    __REG32 READY : 1;
+    __REG32 ready : 1;
     __REG32 : 24;
 } __attribute__((packed)) syscfg_cmpcr_t;
 

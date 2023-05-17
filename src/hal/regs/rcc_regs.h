@@ -7,440 +7,440 @@
 
 typedef struct
 {
-    __REG32 HSION : 1;    // Bit 0
-    __REG32 HSIRDY : 1;
+    __REG32 hsion : 1;    // bit 0
+    __REG32 hsirdy : 1;
     __REG32 : 1;
-    __REG32 HSITRIM : 5;
-    __REG32 HSICAL : 8;
-    __REG32 HSEON : 1;
-    __REG32 HSERDY : 1;
-    __REG32 HSEBYP : 1;
-    __REG32 CSSON : 1;
+    __REG32 hsitrim : 5;
+    __REG32 hsical : 8;
+    __REG32 hseon : 1;
+    __REG32 hserdy : 1;
+    __REG32 hsebyp : 1;
+    __REG32 csson : 1;
     __REG32 : 4;
-    __REG32 PLLON : 1;
-    __REG32 PLLRDY : 1;
-    __REG32 PLLI2SON : 1;
-    __REG32 PLLI2SRDY : 1;
-    __REG32 : 4;        // Bit 31
+    __REG32 pllon : 1;
+    __REG32 pllrdy : 1;
+    __REG32 plli2son : 1;
+    __REG32 plli2srdy : 1;
+    __REG32 : 4;        // bit 31
 } __attribute__((packed)) rcc_cr_t;
 
 typedef struct
 {
-    __REG32 PLLM0 : 1;
-    __REG32 PLLM1 : 1;
-    __REG32 PLLM2 : 1;
-    __REG32 PLLM3 : 1;
-    __REG32 PLLM4 : 1;
-    __REG32 PLLM5 : 1;
-    __REG32 PLLN : 9;
+    __REG32 pllm0 : 1;
+    __REG32 pllm1 : 1;
+    __REG32 pllm2 : 1;
+    __REG32 pllm3 : 1;
+    __REG32 pllm4 : 1;
+    __REG32 pllm5 : 1;
+    __REG32 plln : 9;
     __REG32 : 1;
-    __REG32 PLLP0 : 1;
-    __REG32 PLLP1 : 1;
+    __REG32 pllp0 : 1;
+    __REG32 pllp1 : 1;
     __REG32 : 4;
-    __REG32 PLLSRC : 1;
+    __REG32 pllsrc : 1;
     __REG32 : 1;    
-    __REG32 PLLQ0 : 1;
-    __REG32 PLLQ1 : 1;
-    __REG32 PLLQ2 : 1;
-    __REG32 PLLQ3 : 1;
+    __REG32 pllq0 : 1;
+    __REG32 pllq1 : 1;
+    __REG32 pllq2 : 1;
+    __REG32 pllq3 : 1;
     __REG32 : 4;
 } __attribute__((packed)) rcc_pllcfg_t;
 
 typedef struct 
 {
-    __REG32 SW0 : 1;
-    __REG32 SW1 : 1;
-    __REG32 SWS0 : 1;
-    __REG32 SWS1 : 1;
-    __REG32 HPRE : 4;
+    __REG32 sw0 : 1;
+    __REG32 sw1 : 1;
+    __REG32 sws0 : 1;
+    __REG32 sws1 : 1;
+    __REG32 hpre : 4;
     __REG32 : 2;
-    __REG32 PPRE1 : 3;
-    __REG32 PPRE2 : 3;
-    __REG32 RTCPRE : 5;
-    __REG32 MCO1 : 2;
-    __REG32 I2SSCR : 1;
-    __REG32 MCO1_PRE : 3;
-    __REG32 MCO2_PRE : 3; 
-    __REG32 MCO2 : 2;
+    __REG32 ppre1 : 3;
+    __REG32 ppre2 : 3;
+    __REG32 rtcpre : 5;
+    __REG32 mco1 : 2;
+    __REG32 i2sscr : 1;
+    __REG32 mco1_pre : 3;
+    __REG32 mco2_pre : 3; 
+    __REG32 mco2 : 2;
 } __attribute__((packed)) rcc_cfgr_t;
 
 typedef struct
 {
-    __REG32 LSIRDYF : 1;
-    __REG32 LSERDYF : 1;
-    __REG32 HSIRDYF : 1;
-    __REG32 HSERDYF : 1;
-    __REG32 PLLRDYF : 1;
-    __REG32 PLLI2SRDYF : 1;
+    __REG32 lsirdyf : 1;
+    __REG32 lserdyf : 1;
+    __REG32 hsirdyf : 1;
+    __REG32 hserdyf : 1;
+    __REG32 pllrdyf : 1;
+    __REG32 plli2srdyf : 1;
     __REG32 : 1;
-    __REG32 CSSF : 1;
-    __REG32 LSIRDYIE : 1;
-    __REG32 LSERDYIE : 1;
-    __REG32 HSIRDYIE : 1;
-    __REG32 HSERDYIE : 1;
-    __REG32 PLLRDYIE : 1;
-    __REG32 PLLI2SRDYIE : 1;
+    __REG32 cssf : 1;
+    __REG32 lsirdyie : 1;
+    __REG32 lserdyie : 1;
+    __REG32 hsirdyie : 1;
+    __REG32 hserdyie : 1;
+    __REG32 pllrdyie : 1;
+    __REG32 plli2srdyie : 1;
     __REG32 : 2;
-    __REG32 LSIRDYC : 1;
-    __REG32 LSERDYC : 1;
-    __REG32 HSIRDYC : 1;
-    __REG32 HSERDYC : 1;
-    __REG32 PLLRDYC : 1;
-    __REG32 PLLI2SRDYC : 1;
+    __REG32 lsirdyc : 1;
+    __REG32 lserdyc : 1;
+    __REG32 hsirdyc : 1;
+    __REG32 hserdyc : 1;
+    __REG32 pllrdyc : 1;
+    __REG32 plli2srdyc : 1;
     __REG32 : 1;
-    __REG32 CSSC : 1;
+    __REG32 cssc : 1;
     __REG32 : 8;
 } __attribute__((packed)) rcc_cir_t;
 
 typedef struct
 {
-    __REG32 GPIOARST : 1;
-    __REG32 GPIOBRST : 1;
-    __REG32 GPIOCRST : 1;
-    __REG32 GPIODRST : 1;
-    __REG32 GPIOERST : 1;
-    __REG32 GPIOFRST : 1;
-    __REG32 GPIOGRST : 1;
-    __REG32 GPIOHRST : 1;
-    __REG32 GPIOIRST : 1;
+    __REG32 gpioarst : 1;
+    __REG32 gpiobrst : 1;
+    __REG32 gpiocrst : 1;
+    __REG32 gpiodrst : 1;
+    __REG32 gpioerst : 1;
+    __REG32 gpiofrst : 1;
+    __REG32 gpiogrst : 1;
+    __REG32 gpiohrst : 1;
+    __REG32 gpioirst : 1;
     __REG32 : 3;
-    __REG32 CRCRST : 1;
+    __REG32 crcrst : 1;
     __REG32 : 3;
-    __REG32 : 5; // Not sure if it will freak out if an unnamed field is not aligned on a 4-byte boundary, and not like it matters how its defined here.
-    __REG32 DMA1RST : 1;
-    __REG32 DMA2RST : 1;
-    __REG32 ETHMACRST : 1;
+    __REG32 : 5; // not sure if it will freak out if an unnamed field is not aligned on a 4-byte boundary, and not like it matters how its defined here.
+    __REG32 dma1rst : 1;
+    __REG32 dma2rst : 1;
+    __REG32 ethmacrst : 1;
     __REG32 : 3;   
-    __REG32 OTGHRST : 1;
+    __REG32 otghrst : 1;
     __REG32 : 2;
 } __attribute__((packed)) rcc_ahb1rstr_t;
 
 typedef struct
 {
-    __REG32 DCMIRST : 1;
+    __REG32 dcmirst : 1;
     __REG32 : 3;
-    __REG32 CRYPRST : 1;
-    __REG32 HASHRST : 1;
-    __REG32 RNCRST : 1;
-    __REG32 OTGFSRST : 1;
+    __REG32 cryprst : 1;
+    __REG32 hashrst : 1;
+    __REG32 rncrst : 1;
+    __REG32 otgfsrst : 1;
     __REG32 : 24;
 } __attribute__((packed)) rcc_ahb2rstr_t;
 
 typedef struct
 {
-    __REG32 FSMCRST : 1;
+    __REG32 fsmcrst : 1;
     __REG32 : 30;
 } __attribute__((packed)) rcc_ahb3rstr_t;
 
 typedef struct
 {
-    __REG32 TIM2RST : 1;
-    __REG32 TIM3RST : 1;
-    __REG32 TIM4RST : 1;
-    __REG32 TIM5RST : 1;
-    __REG32 TIM6RST : 1;
-    __REG32 TIM7RST : 1;
-    __REG32 TIM12RST : 1;
-    __REG32 TIM13RST : 1;
-    __REG32 TIM14RST : 1;
+    __REG32 tim2rst : 1;
+    __REG32 tim3rst : 1;
+    __REG32 tim4rst : 1;
+    __REG32 tim5rst : 1;
+    __REG32 tim6rst : 1;
+    __REG32 tim7rst : 1;
+    __REG32 tim12rst : 1;
+    __REG32 tim13rst : 1;
+    __REG32 tim14rst : 1;
     __REG32 : 2;
-    __REG32 WWDGRST : 1;
+    __REG32 wwdgrst : 1;
     __REG32 : 2;
-    __REG32 SPI2RST : 1;
-    __REG32 SPI3RST : 1;
+    __REG32 spi2rst : 1;
+    __REG32 spi3rst : 1;
     __REG32 : 1;
-    __REG32 UART2RST : 1;
-    __REG32 UART3RST : 1;
-    __REG32 UART4RST : 1;
-    __REG32 UART5RST : 1;
-    __REG32 I2C1RST : 1;
-    __REG32 I2C2RST : 1;
-    __REG32 I2C3RST : 1;
+    __REG32 uart2rst : 1;
+    __REG32 uart3rst : 1;
+    __REG32 uart4rst : 1;
+    __REG32 uart5rst : 1;
+    __REG32 i2c1rst : 1;
+    __REG32 i2c2rst : 1;
+    __REG32 i2c3rst : 1;
     __REG32 : 1;
-    __REG32 CAN1RST : 1;
-    __REG32 CAN2RST : 1;
+    __REG32 can1rst : 1;
+    __REG32 can2rst : 1;
     __REG32 : 1;
-    __REG32 PWRRST : 1;
-    __REG32 DACRST : 1;
+    __REG32 pwrrst : 1;
+    __REG32 dacrst : 1;
     __REG32 : 2;
 } __attribute__((packed)) rcc_apb1rstr_t;
 
 typedef struct
 {
-    __REG32 TIM1RST : 1;
-    __REG32 TIM8RST : 1;
+    __REG32 tim1rst : 1;
+    __REG32 tim8rst : 1;
     __REG32 : 2;
-    __REG32 USART1RST : 1;
-    __REG32 USART6RST : 1;
+    __REG32 usart1rst : 1;
+    __REG32 usart6rst : 1;
     __REG32 : 2;
-    __REG32 ADCRST : 1;
+    __REG32 adcrst : 1;
     __REG32 : 2;
-    __REG32 SDIORST : 1;
-    __REG32 SPI1RST : 1;
+    __REG32 sdiorst : 1;
+    __REG32 spi1rst : 1;
     __REG32 : 1;
-    __REG32 SYSCFGRST: 1;
+    __REG32 syscfgrst: 1;
     __REG32 : 1;
-    __REG32 TIM9RST : 1;
-    __REG32 TIM10RST : 1;
-    __REG32 TIM11RST : 1;
+    __REG32 tim9rst : 1;
+    __REG32 tim10rst : 1;
+    __REG32 tim11rst : 1;
     __REG32 : 13;
 } __attribute__((packed)) rcc_apb2rstr_t;
 
 typedef struct
 {
-    __REG32 GPIOAEN : 1;
-    __REG32 GPIOBEN : 1;
-    __REG32 GPIOCEN : 1;
-    __REG32 GPIODEN : 1;
-    __REG32 GPIOEEN : 1;
-    __REG32 GPIOFEN : 1;
-    __REG32 GPIOGEN : 1;
-    __REG32 GPIOHEN : 1;
-    __REG32 GPIOIEN : 1;
+    __REG32 gpioaen : 1;
+    __REG32 gpioben : 1;
+    __REG32 gpiocen : 1;
+    __REG32 gpioden : 1;
+    __REG32 gpioeen : 1;
+    __REG32 gpiofen : 1;
+    __REG32 gpiogen : 1;
+    __REG32 gpiohen : 1;
+    __REG32 gpioien : 1;
     __REG32 : 3;
-    __REG32 CRCEN : 1;
-    __REG32 : 5; // This is over a 32-bit boundary. Hopefully it's not effed
-    __REG32 BKPSR : 1;
+    __REG32 crcen : 1;
+    __REG32 : 5; // this is over a 32-bit boundary. hopefully it's not effed
+    __REG32 bkpsr : 1;
     __REG32 : 1;
-    __REG32 CCMDATARAMEN : 1;
-    __REG32 DMA1EN : 1;
-    __REG32 DMA2EN : 1;
+    __REG32 ccmdataramen : 1;
+    __REG32 dma1en : 1;
+    __REG32 dma2en : 1;
     __REG32 : 2;
-    __REG32 ETHMACEN : 1;
-    __REG32 ETHMACTXEN : 1;
-    __REG32 ETHMACRXEN : 1;
-    __REG32 ETHMACPTPEN : 1;
-    __REG32 OTGHSEN : 1;
-    __REG32 OTGHSULPIEN : 1;
+    __REG32 ethmacen : 1;
+    __REG32 ethmactxen : 1;
+    __REG32 ethmacrxen : 1;
+    __REG32 ethmacptpen : 1;
+    __REG32 otghsen : 1;
+    __REG32 otghsulpien : 1;
     __REG32 : 1;
 } __attribute__((packed)) rcc_ahb1enr_t;
 
 typedef struct
 {
-    __REG32 DCMIEN : 1;
+    __REG32 dcmien : 1;
     __REG32 : 3;
-    __REG32 CRYPEN : 1;
-    __REG32 HASHEN : 1;
-    __REG32 RNGEN : 1;
-    __REG32 OTGFSEN : 1;
+    __REG32 crypen : 1;
+    __REG32 hashen : 1;
+    __REG32 rngen : 1;
+    __REG32 otgfsen : 1;
     __REG32 : 24;    
 } __attribute__((packed)) rcc_ahb2enr_t;
 
 typedef struct
 {
-    __REG32 FSMCEN : 1;
+    __REG32 fsmcen : 1;
     __REG32 : 30;
 } __attribute__((packed)) rcc_ahb3enr_t;
 
 typedef struct
 {    
-    __REG32 TIM2EN : 1;
-    __REG32 TIM3EN : 1;
-    __REG32 TIM4EN : 1;
-    __REG32 TIM5EN : 1;
-    __REG32 TIM6EN : 1;
-    __REG32 TIM7EN : 1;
-    __REG32 TIM12EN : 1;
-    __REG32 TIM13EN : 1;
-    __REG32 TIM14EN : 1;
+    __REG32 tim2en : 1;
+    __REG32 tim3en : 1;
+    __REG32 tim4en : 1;
+    __REG32 tim5en : 1;
+    __REG32 tim6en : 1;
+    __REG32 tim7en : 1;
+    __REG32 tim12en : 1;
+    __REG32 tim13en : 1;
+    __REG32 tim14en : 1;
     __REG32 : 2;
-    __REG32 WWDGEN : 1;
+    __REG32 wwdgen : 1;
     __REG32 : 2;
-    __REG32 SPI2EN : 1;
-    __REG32 SPI3EN : 1;
+    __REG32 spi2en : 1;
+    __REG32 spi3en : 1;
     __REG32 : 1;
-    __REG32 UART2EN : 1;
-    __REG32 UART3EN : 1;
-    __REG32 UART4EN : 1;
-    __REG32 UART5EN : 1;
-    __REG32 I2C1EN : 1;
-    __REG32 I2C2EN : 1;
-    __REG32 I2C3EN : 1;
+    __REG32 uart2en : 1;
+    __REG32 uart3en : 1;
+    __REG32 uart4en : 1;
+    __REG32 uart5en : 1;
+    __REG32 i2c1en : 1;
+    __REG32 i2c2en : 1;
+    __REG32 i2c3en : 1;
     __REG32 : 1;
-    __REG32 CAN1EN : 1;
-    __REG32 CAN2EN : 1;
+    __REG32 can1en : 1;
+    __REG32 can2en : 1;
     __REG32 : 1;
-    __REG32 PWREN : 1;
-    __REG32 DACEN : 1;
+    __REG32 pwren : 1;
+    __REG32 dacen : 1;
     __REG32 : 2;
 } __attribute__((packed)) rcc_apb1enr_t;
 
 typedef struct
 {    
-    __REG32 TIM1EN : 1;
-    __REG32 TIM8EN : 1;
+    __REG32 tim1en : 1;
+    __REG32 tim8en : 1;
     __REG32 : 2;
-    __REG32 USART1EN : 1;
-    __REG32 USART6EN : 1;
+    __REG32 usart1en : 1;
+    __REG32 usart6en : 1;
     __REG32 : 2;
-    __REG32 ADCEN : 1;
+    __REG32 adcen : 1;
     __REG32 : 2;
-    __REG32 SDIOEN : 1;
-    __REG32 SPI1EN : 1;
+    __REG32 sdioen : 1;
+    __REG32 spi1en : 1;
     __REG32 : 1;
-    __REG32 SYSCFGEN: 1;
+    __REG32 syscfgen: 1;
     __REG32 : 1;
-    __REG32 TIM9EN : 1;
-    __REG32 TIM10EN : 1;
-    __REG32 TIM11EN : 1;
+    __REG32 tim9en : 1;
+    __REG32 tim10en : 1;
+    __REG32 tim11en : 1;
     __REG32 : 13;
 } __attribute__((packed)) rcc_apb2enr_t;
 
 typedef struct 
 {
-    __REG32 GPIOALPEN : 1;
-    __REG32 GPIOBLPEN : 1;
-    __REG32 GPIOCLPEN : 1;
-    __REG32 GPIODLPEN : 1;
-    __REG32 GPIOELPEN : 1;
-    __REG32 GPIOFLPEN : 1;
-    __REG32 GPIOGLPEN : 1;
-    __REG32 GPIOHLPEN : 1;
-    __REG32 GPIOILPEN : 1;
+    __REG32 gpioalpen : 1;
+    __REG32 gpioblpen : 1;
+    __REG32 gpioclpen : 1;
+    __REG32 gpiodlpen : 1;
+    __REG32 gpioelpen : 1;
+    __REG32 gpioflpen : 1;
+    __REG32 gpioglpen : 1;
+    __REG32 gpiohlpen : 1;
+    __REG32 gpioilpen : 1;
     __REG32 : 3;
-    __REG32 CRCLPEN : 1;
+    __REG32 crclpen : 1;
     __REG32 : 2;
-    __REG32 FLITFLPEN : 1;
-    __REG32 SRAM1LPEN : 1;
-    __REG32 SRAM2LPEN : 1;
-    __REG32 BKPSRAMLPEN : 1;
+    __REG32 flitflpen : 1;
+    __REG32 sram1lpen : 1;
+    __REG32 sram2lpen : 1;
+    __REG32 bkpsramlpen : 1;
     __REG32 : 2;
-    __REG32 DMA1LPEN : 1;
-    __REG32 DMA2LPEN : 1;
+    __REG32 dma1lpen : 1;
+    __REG32 dma2lpen : 1;
     __REG32 : 2;
-    __REG32 ETHMACLPEN : 1;
-    __REG32 ETHTXLPEN : 1;
-    __REG32 ETHRXLPEN : 1;
-    __REG32 ETHPTLPPEN : 1;
-    __REG32 OTGHSLPEN : 1;
-    __REG32 OTGHSULPILPEN : 1;
+    __REG32 ethmaclpen : 1;
+    __REG32 ethtxlpen : 1;
+    __REG32 ethrxlpen : 1;
+    __REG32 ethptlppen : 1;
+    __REG32 otghslpen : 1;
+    __REG32 otghsulpilpen : 1;
     __REG32 : 1;
 } __attribute__((packed)) rcc_ahb1_lpenr_t;
 
 typedef struct
 {
-    __REG32 DCMILPEN : 1;
+    __REG32 dcmilpen : 1;
     __REG32 : 3;
-    __REG32 CRYPLPEN : 1;
-    __REG32 HASHLPEN : 1;
-    __REG32 RNGLPEN : 1;
-    __REG32 OTGFSLPEN : 1;
+    __REG32 cryplpen : 1;
+    __REG32 hashlpen : 1;
+    __REG32 rnglpen : 1;
+    __REG32 otgfslpen : 1;
     __REG32 : 24;
 } __attribute__((packed)) rcc_ahb2_lpenr_t;
 
 typedef struct
 {
-    __REG32 FSMCLPEN : 1;
+    __REG32 fsmclpen : 1;
     __REG32 : 30;
 } __attribute__((packed)) rcc_ahb3_lpenr_t;
 
 typedef struct
 {    
-    __REG32 TIM2LPEN : 1;
-    __REG32 TIM3LPEN : 1;
-    __REG32 TIM4LPEN : 1;
-    __REG32 TIM5LPEN : 1;
-    __REG32 TIM6LPEN : 1;
-    __REG32 TIM7LPEN : 1;
-    __REG32 TIM12LPEN : 1;
-    __REG32 TIM13LPEN : 1;
-    __REG32 TIM14LPEN : 1;
+    __REG32 tim2lpen : 1;
+    __REG32 tim3lpen : 1;
+    __REG32 tim4lpen : 1;
+    __REG32 tim5lpen : 1;
+    __REG32 tim6lpen : 1;
+    __REG32 tim7lpen : 1;
+    __REG32 tim12lpen : 1;
+    __REG32 tim13lpen : 1;
+    __REG32 tim14lpen : 1;
     __REG32 : 2;
-    __REG32 WWDGLPEN : 1;
+    __REG32 wwdglpen : 1;
     __REG32 : 2;
-    __REG32 SPI2LPEN : 1;
-    __REG32 SPI3LPEN : 1;
+    __REG32 spi2lpen : 1;
+    __REG32 spi3lpen : 1;
     __REG32 : 1;
-    __REG32 UART2LPEN : 1;
-    __REG32 UART3LPEN : 1;
-    __REG32 UART4LPEN : 1;
-    __REG32 UART5LPEN : 1;
-    __REG32 I2C1LPEN : 1;
-    __REG32 I2C2LPEN : 1;
-    __REG32 I2C3LPEN : 1;
+    __REG32 uart2lpen : 1;
+    __REG32 uart3lpen : 1;
+    __REG32 uart4lpen : 1;
+    __REG32 uart5lpen : 1;
+    __REG32 i2c1lpen : 1;
+    __REG32 i2c2lpen : 1;
+    __REG32 i2c3lpen : 1;
     __REG32 : 1;
-    __REG32 CAN1LPEN : 1;
-    __REG32 CAN2LPEN : 1;
+    __REG32 can1lpen : 1;
+    __REG32 can2lpen : 1;
     __REG32 : 1;
-    __REG32 PWRLPEN : 1;
-    __REG32 DACLPEN : 1;
+    __REG32 pwrlpen : 1;
+    __REG32 daclpen : 1;
     __REG32 : 2;
 } __attribute__((packed)) rcc_apb1_lpenr_t;
 
 typedef struct
 {
-    __REG32 TIM1LPEN : 1;
-    __REG32 TIM8LPN : 1;
+    __REG32 tim1lpen : 1;
+    __REG32 tim8lpn : 1;
     __REG32 : 2;
-    __REG32 USART1LPEN : 1;
-    __REG32 USART6LPEN : 1;
+    __REG32 usart1lpen : 1;
+    __REG32 usart6lpen : 1;
     __REG32 : 2;
-    __REG32 ADCLPEN : 1;
+    __REG32 adclpen : 1;
     __REG32 : 2;
-    __REG32 SDIOLPEN : 1;
-    __REG32 SPI1LPEN : 1;
+    __REG32 sdiolpen : 1;
+    __REG32 spi1lpen : 1;
     __REG32 : 1;
-    __REG32 SYSCFGLPEN: 1;
+    __REG32 syscfglpen: 1;
     __REG32 : 1;
-    __REG32 TIM9LPEN : 1;
-    __REG32 TIM10LPEN : 1;
-    __REG32 TIM11LPEN : 1;
+    __REG32 tim9lpen : 1;
+    __REG32 tim10lpen : 1;
+    __REG32 tim11lpen : 1;
     __REG32 : 13;
 } __attribute__((packed)) rcc_apb2_lpenr_t;
 
 typedef struct
 {
-    __REG32 LSEON : 1;
-    __REG32 LSERDY : 1;
-    __REG32 LSEBYP : 1;
+    __REG32 lseon : 1;
+    __REG32 lserdy : 1;
+    __REG32 lsebyp : 1;
     __REG32 : 5;
-    __REG32 RTCSEL : 1;
+    __REG32 rtcsel : 1;
     __REG32 : 5;
-    __REG32 RTCEN : 1;
-    __REG32 BDRST : 1;
+    __REG32 rtcen : 1;
+    __REG32 bdrst : 1;
     __REG32 : 15;
 } __attribute__((packed)) rcc_bdcr_t;
 
 typedef struct
 {
-    __REG32 LSION : 1;
-    __REG32 LSIRDY : 1;
+    __REG32 lsion : 1;
+    __REG32 lsirdy : 1;
     __REG32 : 22;
-    __REG32 RMVF : 1;
-    __REG32 BORRSTF : 1;
-    __REG32 PINRSTF : 1;
-    __REG32 PORRSTF : 1;
-    __REG32 SFTRSTF : 1;
-    __REG32 IWDGRSTF : 1;
-    __REG32 WWDGRSTF : 1;
-    __REG32 LPWRRSTF : 1;
+    __REG32 rmvf : 1;
+    __REG32 borrstf : 1;
+    __REG32 pinrstf : 1;
+    __REG32 porrstf : 1;
+    __REG32 sftrstf : 1;
+    __REG32 iwdgrstf : 1;
+    __REG32 wwdgrstf : 1;
+    __REG32 lpwrrstf : 1;
 } __attribute__((packed)) rcc_csr_t;
 
 typedef struct
 {
-    __REG32 MODPER : 13;
-    __REG32 INCSTEP : 15;
+    __REG32 modper : 13;
+    __REG32 incstep : 15;
     __REG32 : 2;
-    __REG32 SPREADSEL : 1;
-    __REG32 SSCGEN : 1;
+    __REG32 spreadsel : 1;
+    __REG32 sscgen : 1;
 } __attribute__((packed)) rcc__sscgr_t;
 
 typedef struct
 {
     __REG32 : 6;
-    __REG32 PLLI2SN0 : 1;
-    __REG32 PLLI2SN1 : 1;
-    __REG32 PLLI2SN2 : 1;
-    __REG32 PLLI2SN3 : 1;
-    __REG32 PLLI2SN4 : 1;
-    __REG32 PLLI2SN5 : 1;
-    __REG32 PLLI2SN6 : 1;
-    __REG32 PLLI2SN7 : 1;
-    __REG32 PLLI2SN8 : 1;
+    __REG32 plli2sn0 : 1;
+    __REG32 plli2sn1 : 1;
+    __REG32 plli2sn2 : 1;
+    __REG32 plli2sn3 : 1;
+    __REG32 plli2sn4 : 1;
+    __REG32 plli2sn5 : 1;
+    __REG32 plli2sn6 : 1;
+    __REG32 plli2sn7 : 1;
+    __REG32 plli2sn8 : 1;
     __REG32 : 13;
-    __REG32 PLLI2SR0 : 1;
-    __REG32 PLLI2SR1 : 1;
-    __REG32 PLLI2SR2 : 1;
+    __REG32 plli2sr0 : 1;
+    __REG32 plli2sr1 : 1;
+    __REG32 plli2sr2 : 1;
     __REG32 : 1;
 } __attribute__((packed)) rcc__plli2scfgr_t;
 

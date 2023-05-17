@@ -7,7 +7,7 @@
 void System_SetClocks(void)
 {
     // Set external clock on
-    RCC->CR.HSEON = 1;
+    RCC->CR.hseon = 1;
     // Wait for HSE RDY flag
-    while(!RCC->CR.HSERDY);
+    while(!RCC->CR.hserdy);
 }
