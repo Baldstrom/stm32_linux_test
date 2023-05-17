@@ -13,7 +13,7 @@
     #define SW_CRC                      (SW_DEFAULT_CRC)
     #define SW_IDENT_CRC                (SW_IDENT_DEFAULT_CRC)
     #define SW_IGNORE_CRC               (SW_IGNORE_CRC_FLAG)
-#elif
+#else
     #define SW_IGNORE_CRC               (0xFFFFFFFFU) // DO *NOT* Ignore CRC by default
     #define SW_CRC                      (0x00000000U) // Default to zeros, should be computed in postbuild step for release builds
     #define SW_IDENT_CRC                (0x00000000U)
@@ -29,9 +29,10 @@ typedef struct
     const uint32_t IdentCrc;
 } SoftwareIdentField_Type;
 
-static const SoftwareIdentField_Type SoftwareIdent __attribute__((used)) = {
+static const SoftwareIdentField_Type SoftwareIdent __attribute__((used)) = 
+{
     SW_IDENT_FORMAT_VERSION,
-    "ProductionBuild",
+    "DevelopmentBuild",
     SW_IGNORE_CRC,
     SW_CRC,
     {
